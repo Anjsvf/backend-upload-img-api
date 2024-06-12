@@ -3,6 +3,7 @@ import cors from "cors";
 import { fileURLToPath } from "url";
 import path from "path";
 
+
 import mongoose from "mongoose";
 import multer from "multer";
 import dotenv from 'dotenv'
@@ -15,7 +16,7 @@ const PORT = process.env.PORT || 5000;
 //configuração do middlewere
 app.use(cors());
 app.use(express.json());
-
+app.use(cors({ origin: 'https://genuine-zabaione-d0ba71.netlify.app/' }));
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
